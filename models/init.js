@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 // Use the promise functionality built into Node
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://localhost/myshop', { useMongoClient: true })
+mongoose.connect(process.env.MLAB, { useMongoClient: true })
   .then(() => {
     console.log('Successfully connected to database!')
   })
