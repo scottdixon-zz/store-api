@@ -36,7 +36,7 @@ app.use((req, res, next) => {
   })
 })
 
-app.listen(7000, (error) => {
+app.listen(process.env.PORT, (error) => {
   if (error) {
     console.log('There was a problem starting the server', error)
   } else {
